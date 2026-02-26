@@ -8,3 +8,4 @@
 ## 支持图像格式：PNG、BMP。不支持JPEG的原因是其为有损压缩格式，加密再解密不能得到原图像。
 ## encryptFolder函数是对hashEncrypt函数的封装，支持对一个目录下及其子目录下的所有PNG或BMP格式图像递归搜索并加密。
 ## 可以在外部模块导入此程序中的函数，也可以通过命令行调用。命令行格式为：python hashEncrypt.py input_path key 。当input_path为目录时，程序会调用encryptFolder函数进行递归搜索并加密。
+## 由于异或的可逆性，加密和解密的过程完全相同，即若要对加密图像解密，用相同的密钥再次执行程序即可。
