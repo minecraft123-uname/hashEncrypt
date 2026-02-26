@@ -35,7 +35,7 @@ def encryptFolder(folder, key):
     for i in os.listdir(folder):
         cur = os.path.join(folder, i)
         if not os.path.isdir(cur):
-            if i.lower().split(".")[-1] == "png":
+            if i.lower().split(".")[-1] in shuffixed:
                 hashEncrypt(Image.open(cur), key).save(cur)
         else:
             encryptFolder(cur, key)
